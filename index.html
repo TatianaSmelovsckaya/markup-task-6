@@ -3,7 +3,364 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Морда»</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
 </head>
 <body>
+    <main>
+        <section class="current-city">
+            <img class="current-city__icon" src="images/location.png" 
+            alt="Иконка локации" title="Иконка локации">
+            <a class="current-city__link" href="http://ya.ru">Екатеринбург</a>
+        </section>
+        
+        <section class="settings">
+            <a class="settings__link" href="http://ya.ru">Настройки</a>
+        </section>
+
+        <section class="ya-mail">
+            <a class="ya-mail__login" href="http://ya.ru">login</a>
+            <a class="ya-mail__letters" href="http://ya.ru">
+                Почта <span class="text--bold">666</span>
+            </a>
+        </section>
+
+        <section class="current-news">
+            <div class="news-header">
+                <a class="news-header__link" href="http://ya.ru">Сейчас в СМИ</a>
+                <a class="news-header__city" href="http://ya.ru">в Екатеринбурге</a>
+                <span class="news-header__date">13 ноября, понедельник 16:57</span>
+            </div>
+            
+            <ul class="news">
+                <li class="news-item">
+                    <a class="news-item__link" href="http://ya.ru">
+                        В Кремле ответили на слова экс-главы ЦРУ о «запутанном» Путином Трампе
+                    </a>
+                </li>
+                <li class="news-item">
+                    <a class="news-item__link" href="http://ya.ru">
+                        Число жертв землетрясения в Иране и Ираке превысило 350 человек
+                    </a>
+                </li>
+                <li class="news-item">
+                    <a class="news-item__link" href="http://ya.ru">
+                        Вероятной целью проникновения в РФ украинского дрона назвали шпионаж
+                    </a>
+                </li>
+                <li class="news-item">
+                    <a class="news-item__link" href="http://ya.ru">
+                        Кремль рассказал о местонахождении не явившегося в суд Сечина
+                    </a>
+                </li>
+                <li class="news-item">
+                    <a class="news-item__link" href="http://ya.ru">
+                        Кремль прокоментировал перенос послания Путина Федеральному собранию
+                    </a>
+                </li>
+            </ul>
+
+            <div class="currencies">
+                <div class="currency">
+                    <a class="currency__link text--bold" href="http://ya.ru">USD ЦБ</a>
+                    <span class="currency__cost">59,18</span>
+                    <span class="currency__delta">-0,10</span>
+                </div>
+                <div class="currency">
+                    <a class="currency__link text--bold" href="http://ya.ru">EUR ЦБ</a>
+                    <span class="currency__cost">68,92</span>
+                    <span class="currency__delta">-0,06</span>
+                </div>
+                <div class="currency">
+                    <a class="currency__link text--bold" href="http://ya.ru">Нефть</a>
+                    <span class="currency__cost">63,44</span>
+                    <span class="currency__delta">-0,27%</span>
+                </div>
+
+                <div class="currency more-currencies">
+                    <a class="currency__link" href="http://ya.ru">
+                        &#128900;&#128900;&#128900;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="small-blurb">
+            <img class="small-blurb__image" src="images/small_blurb.png" 
+            alt="Яндекс.Кард" title="Яндекс.Кард">
+            <a class="small-blurb__link" href="http://ya.ru">Любой каприз за&nbsp;ваши&nbsp;деньги</a>
+            <span class="small-blurb__description">Яндекс.Кард от Яндекс.Деньги</span>
+        </section>
+
+        <section class="ya">
+            <span class="ya__header">Яндекс</span>
+        </section>
+
+        <section class="search">
+            <div class="menu">
+                <a class="menu__link" href="http://ya.ru">Карты</a>
+                <a class="menu__link" href="http://ya.ru">Маркет</a>
+                <a class="menu__link" href="http://ya.ru">Новости</a>
+                <a class="menu__link" href="http://ya.ru">Переводчик</a>
+                <a class="menu__link" href="http://ya.ru">Картинки</a>
+                <a class="menu__link" href="http://ya.ru">Видео</a>
+                <a class="menu__link" href="http://ya.ru">Музыка</a>
+                <a class="menu__link" href="http://ya.ru">ещё</a>
+            </div>
+
+            <form class="search-form">
+                <input type="search" class="search-form__search" >
+                <button type="submit" class="search-form__button">Найти</button>
+            </form>
+
+            <div class="example">
+                <span class="example__text">
+                    Найдётся всё. Например, 
+                    <a class="example__link" href="http://ya.ru">выхожу один я на дорогу</a>
+                </span>
+            </div>
+        </section>
+
+        <section class="blurb">
+            <img class="blurb__image" src="images/blurb.png" 
+            alt="Банк Открытие" title="Банк Открытие">
+        </section>
+
+        <section class="visited">
+            <h2 class="visited-header">
+                <a class="visited-header__link" href="http://ya.ru">Посещаемое</a>
+            </h2>
+
+            <div class="visited-item">
+                <a class="visited-item__theme" href="http://ya.ru">Маркет</a>
+                &mdash;
+                <a class="visited-item__article" href="http://ya.ru">китайская распродажа</a>
+            </div>
+            <div class="visited-item">
+                <a class="visited-item__theme" href="http://ya.ru">Авто.ру</a>
+                &mdash;
+                <a class="visited-item__article" href="http://ya.ru">Туссан третьей серии</a>
+            </div>
+            <div class="visited-item">
+                <a class="visited-item__theme" href="http://ya.ru">Недвижимость</a>
+                &mdash;
+                <a class="visited-item__article" href="http://ya.ru">продажа студии</a>
+            </div>
+            <div class="visited-item">
+                <a class="visited-item__theme" href="http://ya.ru">Работа</a>
+                &mdash;
+                <a class="visited-item__article" href="http://ya.ru">охранником</a>
+            </div>
+            <div class="visited-item">
+                <a class="visited-item__theme" href="http://ya.ru">Здоровье</a>
+                &mdash;
+                <a class="visited-item__article" href="http://ya.ru">врач на связи</a>
+            </div>
+            <div class="visited-item">
+                <a class="visited-item__theme" href="http://ya.ru">Коллекции</a>
+                &mdash;
+                <a class="visited-item__article" href="http://ya.ru">как мелировать волосы</a>
+            </div>
+            <div class="visited-item">
+                <a class="visited-item__theme" href="http://ya.ru">Авиабилеты</a>
+                &mdash;
+                <a class="visited-item__article" href="http://ya.ru">из Екатеринбурга</a>
+            </div>
+        </section>
+
+        <section class="tv">
+            <h2 class="tv-header">
+                <a class="tv-header__link" href="http://ya.ru">Телепрограмма</a>
+            </h2>
+            <img class="tv__online" src="images/tv-online.png" alt="TV Online" title="TV Online">
+
+            <div class="tv-item">
+                <span class="tv-item__time">16:00</span>
+                <a class="tv-item__broadcast" href="http://ya.ru">Понять. Простить</a>
+                <a class="tv-item__channel" href="http://ya.ru">41 Домашний</a>
+            </div>
+            <div class="tv-item">
+                <span class="tv-item__time">16:30</span>
+                <a class="tv-item__broadcast" href="http://ya.ru">Место встречи</a>
+                <a class="tv-item__channel" href="http://ya.ru">НТВ</a>
+            </div>
+            <div class="tv-item">
+                <span class="tv-item__time">16:30</span>
+                <a class="tv-item__broadcast" href="http://ya.ru">Детективы</a>
+                <a class="tv-item__channel" href="http://ya.ru">Пятый канал</a>
+            </div>
+            <div class="tv-item">
+                <span class="tv-item__time">16:30</span>
+                <a class="tv-item__broadcast" href="http://ya.ru">Новости</a>
+                <a class="tv-item__channel" href="http://ya.ru">РЕН ТВ</a>
+            </div>
+            <div class="tv-item">
+                <span class="tv-item__time">16:30</span>
+                <a class="tv-item__broadcast" href="http://ya.ru">Гадалка</a>
+                <a class="tv-item__channel" href="http://ya.ru">ТВ-3</a>
+            </div>
+            <div class="tv-item">
+                <span class="tv-item__time">16:30</span>
+                <a class="tv-item__broadcast" href="http://ya.ru">Рельные пацаны</a>
+                <a class="tv-item__channel" href="http://ya.ru">ТНТ</a>
+            </div>
+        </section>
+
+        <section class="weather">
+            <h2 class="weather-header">
+                <a class="weather-header__link" href="http://ya.ru">Погода</a>
+            </h2>
+            <img class="weather__snow" src="images/snow.png" alt="Снег" title="Снег">
+            <span class="weather__current-temperature">-3 &#186;C</span>
+            <span class="weather__future-temperature">Вечер -5, ночь -7</span>
+        </section>
+
+        <section class="traffic-jams">
+            <h2 class="traffic-jams-header">
+                <a class="traffic-jams-header__link" href="http://ya.ru">Пробки</a>
+            </h2>
+            <img class="traffic-jams__4" src="images/jams-4.png" 
+            alt="Пробки 4 балла" title="Пробки 4 балла">
+            <span class="traffic-jams__current-value">4 балла</span>
+            <span class="traffic-jams__description">Местами затруднения</span>
+        </section>
+
+        <section class="anecdotes">
+            <h2 class="anecdotes-header">
+                <a class="anecdotes-header__link" href="http://ya.ru">Лучшие анекдоты</a>
+            </h2>
+
+            <article class="anecdote">
+                <span class="anecdote-theme">
+                    Раздел: 
+                    <a class="anecdote-theme__link" href="http://ya.ru">Медицинские</a>
+                    .
+                </span>
+                <p class="anecdote__text">
+                    - Вас лечить хорошо или бесплатно?
+                </p>
+            </article>
+
+            <div class="more-anecdotes">
+                <img class="more-anecdotes__refresh" src="images/refresh.png" 
+                alt="Показать ещё анекдот" title="Показать ещё анекдот">
+                <a class="more-anecdotes__link" href="http://ya.ru">Показать ещё</a>
+            </div>
+        </section>
+        
+        <section class="auto-news">
+            <h2 class="auto-news-header">
+                <a class="auto-news-header__link" href="http://ya.ru">Автомобильные новости</a>
+            </h2>
+
+            <div class="auto-news-items">
+                <div class="white-shadow--top"></div>
+                <div class="white-shadow--bottom"></div>
+                <div class="auto-news-item">
+                    <a class="auto-news-item__link" href="http://ya.ru">
+                        Автоэксперты назвали лучший женский автомобиль 2017 года
+                    </a>
+                    <span class="auto-news-item__time">10:56</span>
+                </div>
+                <div class="auto-news-item">
+                    <a class="auto-news-item__link" href="http://ya.ru">
+                        Aston Martin Пола Маккартни выставлен на торги Bonhams
+                    </a>
+                    <span class="auto-news-item__time">09:59</span>
+                </div>
+                <div class="auto-news-item">
+                    <a class="auto-news-item__link" href="http://ya.ru">
+                        Эксперты: хакеры могут убить миллионы людей через взлом автомобилей
+                    </a>
+                    <span class="auto-news-item__time">09:03</span>
+                </div>
+                <div class="auto-news-item">
+                    <a class="auto-news-item__link" href="http://ya.ru">
+                        Volvo поставит Uber 24 000 беспилотных кроссоверов XC90
+                    </a>
+                    <span class="auto-news-item__time">01:00</span>
+                </div>
+                <div class="auto-news-item">
+                    <a class="auto-news-item__link" href="http://ya.ru">
+                        В октябре российский рынок грузовиков вырос на 60%
+                    </a>
+                    <span class="auto-news-item__time">08:00</span>
+                </div>
+                <div class="auto-news-item">
+                    <a class="auto-news-item__link" href="http://ya.ru">
+                        Lincoln представил обновлённый кроссовер Lincoln MKC 2019
+                    </a>
+                    <span class="auto-news-item__time">12:04</span>
+                </div>
+                <div class="auto-news-item">
+                    <a class="auto-news-item__link" href="http://ya.ru">
+                        Производство электрокаров от Skoda будет налажено в 2020 году
+                    </a>
+                    <span class="auto-news-item__time">12:15</span>
+                </div>
+                <div class="auto-news-item">
+                    <a class="auto-news-item__link" href="http://ya.ru">
+                        Третью модель китайской компании LynkCo показали до премьеры
+                    </a>
+                    <span class="auto-news-item__time">16:25</span>
+                </div>
+                <div class="auto-news-item">
+                    <a class="auto-news-item__link" href="http://ya.ru">
+                        В московском каршеринге появились первые электрокары
+                    </a>
+                    <span class="auto-news-item__time">22:05</span>
+                </div>
+                <div class="auto-news-item">
+                    <a class="auto-news-item__link" href="http://ya.ru">
+                        Челябинцев приглашают на тест-драйв нового УАЗ ПРОФИ
+                    </a>
+                    <span class="auto-news-item__time">10:07</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="map">
+            <h2 class="map-header">
+                <a class="map-header__link" href="http://ya.ru">Карта Екатеринбурга</a>
+            </h2>
+
+            <a class="map__link" href="http://ya.ru">Такси</a>
+            <a class="map__link" href="http://ya.ru">Расписания</a>
+            <a class="map__link" href="http://ya.ru">Междугородные автобусы</a>
+        </section>
+
+        <section class="affiche">
+            <h2 class="affiche-header">
+                <a class="affiche-header__link" href="http://ya.ru">Афиша</a>
+            </h2>
+
+            <div class="affiche-item">
+                <a class="affiche-item__link" href="http://ya.ru">Субурбикон</a>
+                <span class="affiche-item__description">премьера в чт</span>
+            </div>
+            <div class="affiche-item">
+                <a class="affiche-item__link" href="http://ya.ru">Последний богатырь</a>
+                <span class="affiche-item__description">приключения</span>
+            </div>
+            <div class="affiche-item">
+                <a class="affiche-item__link" href="http://ya.ru">Фиксики: большой секрет</a>
+                <span class="affiche-item__description">мультфильм</span>
+            </div>
+            <div class="affiche-item">
+                <a class="affiche-item__link" href="http://ya.ru">Тор: Рагнарёк</a>
+                <span class="affiche-item__description">фэнтези</span>
+            </div>
+            <div class="affiche-item">
+                <a class="affiche-item__link" href="http://ya.ru">Убийство в Восточном экспрессе</a>
+                <span class="affiche-item__description">драма</span>
+            </div>
+
+            <div class="affiche-item concerts">
+                <a class="affiche-item__link" href="http://ya.ru">Концерты</a>
+                &mdash;
+                <a class="affiche-item__link" href="http://ya.ru">Brainstorm</a>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
