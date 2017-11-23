@@ -62,10 +62,7 @@ main
         '. d d e .'
         'g h h h .'
         '. i i i .'
-        '. j k l .'
-        '. j k m .'
-        '. n o p .'
-        '. n o q .';
+        '. j k l .';
     min-width: 1200px;
     max-width: 1600px;
     margin: 0 auto;
@@ -77,11 +74,6 @@ main
 {
     grid-area: a;
     padding: 1rem 0 0;
-}
-
-.current-city__select
-{
-    font-size: 1rem;
 }
 
 .current-city__select::before
@@ -112,6 +104,7 @@ main
 
 .settings
 {
+    position: relative;
     grid-area: b;
     padding: 1rem 0 0;
     text-align: right;
@@ -119,7 +112,110 @@ main
 
 .settings__select
 {
-    font-size: 1rem;
+    cursor: pointer;
+}
+
+.settings-items
+{
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    display: none;
+    padding: 1rem;
+    box-sizing: padding-box;
+    box-shadow: 0 0 3px rgba(0,0,0, .5);
+    background: #fff;
+    text-align: left;
+}
+
+.settings-item:not(:last-child)
+{
+    margin: 0 0 .5rem;
+}
+
+label[for^='set-']
+{
+    cursor: pointer;
+}
+
+label[for^='set-']::before
+{
+    position: relative;
+    top: .1rem;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin: 0 .25rem 0 0;
+    background: url(images/checkbox.png) 0 0 no-repeat;
+    background-size: cover;
+    content: '';
+}
+
+input[name='display-settings'],
+input[name='select-setting'],
+input[id='set-1']:not(:checked) ~ main .column-1 .visited,
+input[id='set-2']:not(:checked) ~ main .column-1 .anecdotes,
+input[id='set-3']:not(:checked) ~ main .column-2 .tv,
+input[id='set-4']:not(:checked) ~ main .column-2 .auto-news,
+input[id='set-5']:not(:checked) ~ main .column-3 .weather,
+input[id='set-6']:not(:checked) ~ main .column-3 .traffic-jams,
+input[id='set-7']:not(:checked) ~ main .column-3 .map,
+input[id='set-8']:not(:checked) ~ main .column-3 .affiche
+{
+    display: none;
+}
+
+input[id='set-1']:not(:checked) ~ input[id='set-2']:not(:checked) ~ main
+{
+    grid-template-areas: 'a . . b c'
+        '. d d e .'
+        'g h h h .'
+        '. i i i .'
+        '. k l . .';
+}
+
+input[id='set-3']:not(:checked) ~ input[id='set-4']:not(:checked) ~ main
+{
+    grid-template-areas: 'a . . b c'
+        '. d d e .'
+        'g h h h .'
+        '. i i i .'
+        '. j l . .';
+}
+
+input[id='set-1']:not(:checked) ~ input[id='set-2']:not(:checked) ~ input[
+id='set-3']:not(:checked) ~ input[id='set-4']:not(:checked) ~ main
+{
+    grid-template-areas: 'a . . b c'
+        '. d d e .'
+        'g h h h .'
+        '. i i i .'
+        '. l . . .';
+}
+
+input[id='select-settings']:checked ~ .settings-items
+{
+    display: block;
+}
+
+input[id='set-1']:not(:checked) ~ main .settings label[for='set-1']::before,
+input[id='set-2']:not(:checked) ~ main .settings label[for='set-2']::before,
+input[id='set-3']:not(:checked) ~ main .settings label[for='set-3']::before,
+input[id='set-4']:not(:checked) ~ main .settings label[for='set-4']::before,
+input[id='set-5']:not(:checked) ~ main .settings label[for='set-5']::before,
+input[id='set-6']:not(:checked) ~ main .settings label[for='set-6']::before,
+input[id='set-7']:not(:checked) ~ main .settings label[for='set-7']::before,
+input[id='set-8']:not(:checked) ~ main .settings label[for='set-8']::before
+{
+    position: relative;
+    top: .1rem;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin: 0 .25rem 0 0;
+    background: url(images/checkbox-empty.png) 0 0 no-repeat;
+    background-size: cover;
+    content: '';
 }
 
 .mail
@@ -133,7 +229,6 @@ main
 .mail__letters
 {
     display: block;
-    font-size: 1rem;
 }
 
 .mail__login
@@ -170,18 +265,13 @@ main
 
 .current-news-items
 {
-    margin: 0 0 .5rem;
+    margin: 0 0 1rem;
     padding: 0;
 }
 
-.current-news-item:last-child
+.current-news-item:not(:last-child)
 {
-    margin-bottom: 1rem;
-}
-
-.current-news-item__more
-{
-    font-size: 1rem;
+    margin: 0 0 .5rem;
 }
 
 .currency
@@ -193,16 +283,6 @@ main
 .currency:last-child
 {
     margin-right: 0;
-}
-
-.currency__link
-{
-    font-size: 1rem;
-}
-
-.currency__cost
-{
-    font-size: 1rem;
 }
 
 .small-blurb
@@ -227,7 +307,6 @@ main
 .small-blurb__description
 {
     display: block;
-    font-size: 1rem;
 }
 
 .yandex
@@ -266,11 +345,13 @@ main
 
 .search-form
 {
+    position: relative;
     margin: 0 0 .5rem;
     padding: 0;
+    background: #eef;
 }
 
-.search-form__search
+.search-form__search-line
 {
     width: 90%;
     height: 3rem;
@@ -279,24 +360,18 @@ main
     outline: none;
 }
 
-.search-form__button
+.search-form__search
 {
     position: absolute;
-    top: 2.1rem;
+    top: 0;
     right: 0;
     display: inline-block;
+    width: 10%;
     height: 3rem;
-    padding: 0 1.5rem;
     border: 2px solid #fd3;
     background-color: #fd3;
     cursor: pointer;
-    font-size: 1rem;
     font-weight: bold;
-}
-
-.example__text
-{
-    font-size: 1rem;
 }
 
 .blurb
@@ -310,9 +385,24 @@ main
     max-height: 150px;
 }
 
-.visited
+.column-1
 {
     grid-area: j;
+}
+
+.column-2
+{
+    grid-area: k;
+}
+
+.column-3
+{
+    grid-area: l;
+}
+
+.visited
+{
+    margin: 0 0 2rem;
 }
 
 .visited-header
@@ -325,20 +415,77 @@ main
     margin: 0 0 .5rem;
 }
 
-.visited-item__theme
+.anecdotes
 {
-    font-size: 1rem;
+    margin: 0 0 2rem;
 }
 
-.visited-item__article
+.anecdotes-header
 {
-    font-size: 1rem;
+    margin: 0 0 1rem;
+}
+
+input[name='refresh-anecdote'],
+.anecdote
+{
+    display: none;
+}
+
+input[id='anecdote-1']:checked ~ .anecdote-1,
+input[id='anecdote-2']:checked ~ .anecdote-2,
+input[id='anecdote-3']:checked ~ .anecdote-3,
+input[id='anecdote-4']:checked ~ .anecdote-4,
+input[id='anecdote-5']:checked ~ .anecdote-5
+{
+    display: block;
+}
+
+.anecdote-theme
+{
+    margin: 0 0 .5rem;
+}
+
+.anecdote__text
+{
+    margin: 0 0 2rem;
+    padding: 0;
+}
+
+.anecdote__refresh
+{
+    cursor: pointer;
+}
+
+.anecdote__refresh::before
+{
+    position: relative;
+    top: .1rem;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin: 0 .25rem 0 0;
+    background: url(images/refresh.png) 0 0 no-repeat;
+    background-size: cover;
+    content: '';
+}
+
+.anecdote__refresh:hover::before
+{
+    position: relative;
+    top: .1rem;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin: 0 .25rem 0 0;
+    background: url(images/refresh-red.png) 0 0 no-repeat;
+    background-size: cover;
+    content: '';
 }
 
 .tv
 {
-    grid-area: k;
     display: block;
+    margin: 0 0 2rem;
 }
 
 .tv-header
@@ -371,155 +518,11 @@ main
     margin: 0 .5rem 0 0;
 }
 
-.tv-item__time
-{
-    font-size: 1rem;
-}
-
-.tv-item__broadcast
-{
-    font-size: 1rem;
-}
-
-.tv-item__channel
-{
-    font-size: 1rem;
-}
-
-.weather
-{
-    grid-area: l;
-}
-
-.weather-header
-{
-    margin: 0 0 1rem;
-}
-
-.weather-header__more
-{
-    margin: 0 .5rem 0 0;
-}
-
-.weather-header__current-weather
-{
-    height: 2rem;
-    margin: -1rem .5rem 0 0;
-}
-
-.weather__future-temperature
-{
-    font-size: 1rem;
-}
-
-.traffic-jams
-{
-    grid-area: m;
-}
-
-.traffic-jams-header
-{
-    margin: 0 0 1rem;
-}
-
-.traffic-jams-header__more
-{
-    margin: 0 .5rem 0 0;
-}
-
-.traffic-jams-header__jams-4
-{
-    height: 1.5rem;
-    margin: -1rem .5rem 0 0;
-}
-
-.traffic-jams__description
-{
-    font-size: 1rem;
-}
-
-.anecdotes
-{
-    grid-area: n;
-}
-
-.anecdotes-header
-{
-    margin: 0 0 1rem;
-}
-
-input[name='refresh-anecdote']
-{
-    display: none;
-}
-
-.anecdote
-{
-    display: none;
-}
-
-input[id='anecdote-1']:checked ~ .anecdote-1,
-input[id='anecdote-2']:checked ~ .anecdote-2,
-input[id='anecdote-3']:checked ~ .anecdote-3,
-input[id='anecdote-4']:checked ~ .anecdote-4,
-input[id='anecdote-5']:checked ~ .anecdote-5
-{
-    display: block;
-}
-
-.anecdote-theme
-{
-    margin: 0 0 .5rem;
-}
-
-.anecdote-theme__link
-{
-    font-size: 1rem;
-}
-
-.anecdote__text
-{
-    margin: 0 0 2rem;
-    padding: 0;
-}
-
-.anecdote__refresh
-{
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.anecdote__refresh::before
-{
-    position: relative;
-    top: .1rem;
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    margin: 0 .25rem 0 0;
-    background: url(images/refresh.png) 0 0 no-repeat;
-    background-size: cover;
-    content: '';
-}
-
-.anecdote__refresh:hover::before
-{
-    position: relative;
-    top: .1rem;
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    margin: 0 .25rem 0 0;
-    background: url(images/refresh-red.png) 0 0 no-repeat;
-    background-size: cover;
-    content: '';
-}
-
 .auto-news
 {
-    grid-area: o;
     position: relative;
     width: 100%;
+    margin: 0 0 2rem;
     overflow: hidden;
 }
 
@@ -567,14 +570,51 @@ input[id='anecdote-5']:checked ~ .anecdote-5
     margin: 0 0 .5rem;
 }
 
-.auto-news-item__link
+.weather
 {
-    font-size: 1rem;
+    margin: 0 0 2rem;
+}
+
+.weather-header
+{
+    margin: 0 0 1rem;
+}
+
+.weather-header__more
+{
+    margin: 0 .5rem 0 0;
+}
+
+.weather-header__current-weather
+{
+    height: 2rem;
+    margin: -1rem .5rem 0 0;
+}
+
+.traffic-jams
+{
+    margin: 0 0 2rem;
+}
+
+.traffic-jams-header
+{
+    margin: 0 0 1rem;
+}
+
+.traffic-jams-header__more
+{
+    margin: 0 .5rem 0 0;
+}
+
+.traffic-jams-header__jams-4
+{
+    height: 1.5rem;
+    margin: -1rem .5rem 0 0;
 }
 
 .map
 {
-    grid-area: p;
+    margin: 0 0 2rem;
 }
 
 .map-header
@@ -585,7 +625,6 @@ input[id='anecdote-5']:checked ~ .anecdote-5
 .map__link
 {
     margin: 0 1rem 0 0;
-    font-size: 1rem;
 }
 
 .map__link:last-child
@@ -595,7 +634,7 @@ input[id='anecdote-5']:checked ~ .anecdote-5
 
 .affiche
 {
-    grid-area: q;
+    margin: 0 0 2rem;
 }
 
 .affiche-header
@@ -611,12 +650,6 @@ input[id='anecdote-5']:checked ~ .anecdote-5
 .affiche-item__link
 {
     margin: 0 .5rem 0 0;
-    font-size: 1rem;
-}
-
-.affiche-item__description
-{
-    font-size: 1rem;
 }
 
 .additional-affiche .affiche-item__link
