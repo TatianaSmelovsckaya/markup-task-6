@@ -7,104 +7,86 @@
     <link href="index.css" rel="stylesheet">
 </head>
 <body>
-    <input type="checkbox" name="select-setting" id="set-1" checked>
-    <input type="checkbox" name="select-setting" id="set-2" checked>
-    <input type="checkbox" name="select-setting" id="set-3" checked>
-    <input type="checkbox" name="select-setting" id="set-4" checked>
-    <input type="checkbox" name="select-setting" id="set-5" checked>
-    <input type="checkbox" name="select-setting" id="set-6" checked>
-    <input type="checkbox" name="select-setting" id="set-7" checked>
-    <input type="checkbox" name="select-setting" id="set-8" checked>
-    
     <main>
-        <section class="current-city">
-            <a class="current-city__select text--gray hover-text--red" href="http://ya.ru">
+        <input type="checkbox" name="select-setting" id="set-1" checked>
+        <input type="checkbox" name="select-setting" id="set-2" checked>
+        <input type="checkbox" name="select-setting" id="set-3" checked>
+        <input type="checkbox" name="select-setting" id="set-4" checked>
+        <input type="checkbox" name="select-setting" id="set-5" checked>
+        <input type="checkbox" name="select-setting" id="set-6" checked>
+        <input type="checkbox" name="select-setting" id="set-7" checked>
+        <input type="checkbox" name="select-setting" id="set-8" checked>
+
+        <section class="city">
+            <a class="city__check text--gray hover-text--red" href="#">
                 Екатеринбург
             </a>
         </section>
 
         <section class="settings">
-            <label class="settings__select text--gray hover-text--red" for="select-settings">
+            <label class="settings__open-popup text--gray hover-text--red" 
+            for="display-settings-popup">
                 Настройки
             </label>
-            <input type="checkbox" id="select-settings" name="display-settings" >
+            <input type="checkbox" id="display-settings-popup" name="display-settings-popup">
 
-            <article class="settings-items">
-                <div class="settings-item">
-                    <label for="set-1">Посещаемое</label>
-                </div>
-                <div class="settings-item">
-                    <label for="set-2">Лучшие анекдоты</label>
-                </div>
-                <div class="settings-item">
-                    <label for="set-3">Телепрограмма</label>
-                </div>
-                <div class="settings-item">
-                    <label for="set-4">Автомобильные новости</label>
-                </div>
-                <div class="settings-item">
-                    <label for="set-5">Погода</label>
-                </div>
-                <div class="settings-item">
-                    <label for="set-6">Пробки</label>
-                </div>
-                <div class="settings-item">
-                    <label for="set-7">Карта Екатеринбурга</label>
-                </div>
-                <div class="settings-item">
-                    <label for="set-8">Афиша</label>
-                </div>
-            </article>
+            <div class="settings-popup">
+                <label class="settings-popup__item" for="set-1">Посещаемое</label>
+                <label class="settings-popup__item" for="set-2">Лучшие анекдоты</label>
+                <label class="settings-popup__item" for="set-3">Телепрограмма</label>
+                <label class="settings-popup__item" for="set-4">Автомобильные новости</label>
+                <label class="settings-popup__item" for="set-5">Погода</label>
+                <label class="settings-popup__item" for="set-6">Пробки</label>
+                <label class="settings-popup__item" for="set-7">Карта Екатеринбурга</label>
+                <label class="settings-popup__item" for="set-8">Афиша</label>
+            </div>
         </section>
 
         <section class="mail">
-            <a class="mail__login text--bold first-letter--red hover-text--red" 
-            href="http://ya.ru">
+            <a class="mail__login text--bold first-letter--red hover-text--red" href="#">
                 login
             </a>
-            <a class="mail__letters" href="http://ya.ru">
+            <a class="mail__letters" href="#">
                 Почта&nbsp;<span class="text--bold hover-text--red">666</span>
             </a>
         </section>
 
-        <section class="current-news">
-            <div class="current-news-header">
-                <a class="current-news-header__more text--big text--blue hover-text--red" 
-                href="http://ya.ru">
+        <section class="widget news">
+            <div class="widget-header">
+                <a class="widget-header__more text--big text--blue hover-text--red" href="#">
                     Сейчас в СМИ
                 </a>
-                <a class="current-news-header__in-city text--big text--light-blue hover-text--red" 
-                href="http://ya.ru">
+                <a class="news__city text--big text--light-blue hover-text--red" href="#">
                     в Екатеринбурге
                 </a>
-                <span class="current-news-header__date text--small text--gray">
+                <span class="news__date text--small text--gray">
                     13 ноября, понедельник 16:57
                 </span>
             </div>
             
-            <ul class="current-news-items">
-                <li class="current-news-item">
-                    <a class="current-news-item__more hover-text--red" href="http://ya.ru">
+            <ul class="news-items">
+                <li class="news-item">
+                    <a class="news-item__link hover-text--red" href="#">
                         В Кремле ответили на слова экс-главы ЦРУ о «запутанном» Путином Трампе
                     </a>
                 </li>
-                <li class="current-news-item">
-                    <a class="current-news-item__more hover-text--red" href="http://ya.ru">
+                <li class="news-item">
+                    <a class="news-item__link hover-text--red" href="#">
                         Число жертв землетрясения в Иране и Ираке превысило 350 человек
                     </a>
                 </li>
-                <li class="current-news-item">
-                    <a class="current-news-item__more hover-text--red" href="http://ya.ru">
+                <li class="news-item">
+                    <a class="news-item__link hover-text--red" href="#">
                         Вероятной целью проникновения в РФ украинского дрона назвали шпионаж
                     </a>
                 </li>
-                <li class="current-news-item">
-                    <a class="current-news-item__more hover-text--red" href="http://ya.ru">
+                <li class="news-item">
+                    <a class="news-item__link hover-text--red" href="#">
                         Кремль рассказал о местонахождении не явившегося в суд Сечина
                     </a>
                 </li>
-                <li class="current-news-item">
-                    <a class="current-news-item__more hover-text--red" href="http://ya.ru">
+                <li class="news-item">
+                    <a class="news-item__link hover-text--red" href="#">
                         Кремль прокоментировал перенос послания Путина Федеральному собранию
                     </a>
                 </li>
@@ -112,28 +94,22 @@
 
             <div class="currencies">
                 <div class="currency">
-                    <a class="currency__link text--bold hover-text--red" href="http://ya.ru">
-                        USD ЦБ
-                    </a>
+                    <a class="currency__link text--bold hover-text--red" href="#">USD ЦБ</a>
                     <span class="currency__cost">59,18</span>
                     <span class="currency__delta text--small text--gray">-0,10</span>
                 </div>
                 <div class="currency">
-                    <a class="currency__link text--bold hover-text--red" href="http://ya.ru">
-                        EUR ЦБ
-                    </a>
+                    <a class="currency__link text--bold hover-text--red" href="#">EUR ЦБ</a>
                     <span class="currency__cost">68,92</span>
                     <span class="currency__delta text--small text--gray">-0,06</span>
                 </div>
                 <div class="currency">
-                    <a class="currency__link text--bold hover-text--red" href="http://ya.ru">
-                        Нефть
-                    </a>
+                    <a class="currency__link text--bold hover-text--red" href="#">Нефть</a>
                     <span class="currency__cost">63,44</span>
                     <span class="currency__delta text--small text--gray">-0,27%</span>
                 </div>
 
-                <a class="currency__link text--gray hover-text--red" href="http://ya.ru">
+                <a class="currencies__more text--gray hover-text--red" href="#">
                     &#128900;&#128900;&#128900;
                 </a>
             </div>
@@ -142,66 +118,40 @@
         <section class="small-blurb">
             <img class="small-blurb__image" src="images/small_blurb.png" 
             alt="Яндекс.Кард" title="Яндекс.Кард">
-            <a class="small-blurb__more text--big text--blue hover-text--red" 
-            href="http://ya.ru">
+
+            <a class="small-blurb__more text--big text--blue hover-text--red" href="#">
                 Любой каприз за&nbsp;ваши&nbsp;деньги
             </a>
             <span class="small-blurb__description">Яндекс.Кард от Яндекс.Деньги</span>
         </section>
 
-        <section class="yandex">
-            <span class="yandex__logo first-letter--red">Яндекс</span>
+        <section class="yandex-logo">
+            <span class="yandex-logo__logo first-letter--red">Яндекс</span>
         </section>
 
         <section class="search">
-            <div class="menu">
-                <a class="menu__link text--big text--blue hover-text--red" 
-                href="http://ya.ru">
-                    Карты
-                </a>
-                <a class="menu__link text--big text--blue hover-text--red" 
-                href="http://ya.ru">
-                    Маркет
-                </a>
-                <a class="menu__link text--big text--blue hover-text--red" 
-                href="http://ya.ru">
-                    Новости
-                </a>
-                <a class="menu__link text--big text--blue hover-text--red" 
-                href="http://ya.ru">
-                    Переводчик
-                </a>
-                <a class="menu__link text--big text--blue hover-text--red" 
-                href="http://ya.ru">
-                    Картинки
-                </a>
-                <a class="menu__link text--big text--blue hover-text--red" 
-                href="http://ya.ru">
-                    Видео
-                </a>
-                <a class="menu__link text--big text--blue hover-text--red" 
-                href="http://ya.ru">
-                    Музыка
-                </a>
-                <a class="menu__link text--big text--blue hover-text--red" 
-                href="http://ya.ru">
-                    ещё
-                </a>
-            </div>
+            <nav class="menu">
+                <a class="menu__link text--big text--blue hover-text--red" href="#">Карты</a>
+                <a class="menu__link text--big text--blue hover-text--red" href="#">Маркет</a>
+                <a class="menu__link text--big text--blue hover-text--red" href="#">Новости</a>
+                <a class="menu__link text--big text--blue hover-text--red" href="#">Переводчик</a>
+                <a class="menu__link text--big text--blue hover-text--red" href="#">Картинки</a>
+                <a class="menu__link text--big text--blue hover-text--red" href="#">Видео</a>
+                <a class="menu__link text--big text--blue hover-text--red" href="#">Музыка</a>
+                <a class="menu__link text--big text--blue hover-text--red" href="#">ещё</a>
+            </nav>
 
             <form class="search-form">
                 <input type="search" class="search-form__search-line">
-                <button type="submit" class="search-form__search">Найти</button>
+                <button type="submit" class="search-form__search text--bold">Найти</button>
             </form>
 
-            <div class="example">
-                <span class="example__text">
-                    Найдётся всё. Например, 
-                    <a class="example__link text--gray hover-text--red " href="http://ya.ru">
-                        выхожу один я на дорогу
-                    </a>
-                </span>
-            </div>
+            <p class="example">
+                Найдётся всё. Например, 
+                <a class="example__link text--gray hover-text--red " href="#">
+                    выхожу один я на дорогу
+                </a>
+            </p>
         </section>
 
         <section class="blurb">
@@ -209,427 +159,379 @@
             alt="Банк Открытие" title="Банк Открытие">
         </section>
 
-        <section class="column-1">
-            <article class="visited">
-                <div class="visited-header">
-                    <a class="visited-header__more text--big text--blue hover-text--red" 
-                    href="http://ya.ru">
-                        Посещаемое
-                    </a>
-                </div>
-
-                <div class="visited-item">
-                    <a class="visited-item__theme text--bold hover-text--red" 
-                    href="http://ya.ru">
-                        Маркет
-                    </a>
-                    &mdash;
-                    <a class="visited-item__article hover-text--red" href="http://ya.ru">
-                        китайская распродажа
-                    </a>
-                </div>
-                <div class="visited-item">
-                    <a class="visited-item__theme text--bold hover-text--red" 
-                    href="http://ya.ru">
-                        Авто.ру
-                    </a>
-                    &mdash;
-                    <a class="visited-item__article hover-text--red" href="http://ya.ru">
-                        Туссан третьей серии
-                    </a>
-                </div>
-                <div class="visited-item">
-                    <a class="visited-item__theme text--bold hover-text--red" 
-                    href="http://ya.ru">
-                        Недвижимость
-                    </a>
-                    &mdash;
-                    <a class="visited-item__article hover-text--red" href="http://ya.ru">
-                        продажа студии
-                    </a>
-                </div>
-                <div class="visited-item">
-                    <a class="visited-item__theme text--bold hover-text--red" 
-                    href="http://ya.ru">
-                        Работа
-                    </a>
-                    &mdash;
-                    <a class="visited-item__article hover-text--red" href="http://ya.ru">
-                        охранником
-                    </a>
-                </div>
-                <div class="visited-item">
-                    <a class="visited-item__theme text--bold hover-text--red" 
-                    href="http://ya.ru">
-                        Здоровье
-                    </a>
-                    &mdash;
-                    <a class="visited-item__article hover-text--red" href="http://ya.ru">
-                        врач на связи
-                    </a>
-                </div>
-                <div class="visited-item">
-                    <a class="visited-item__theme text--bold hover-text--red" 
-                    href="http://ya.ru">
-                        Коллекции
-                    </a>
-                    &mdash;
-                    <a class="visited-item__article hover-text--red" href="http://ya.ru">
-                        как мелировать волосы
-                    </a>
-                </div>
-                <div class="visited-item">
-                    <a class="visited-item__theme text--bold hover-text--red" 
-                    href="http://ya.ru">
-                        Авиабилеты
-                    </a>
-                    &mdash;
-                    <a class="visited-item__article hover-text--red" href="http://ya.ru">
-                        из Екатеринбурга
-                    </a>
-                </div>
-            </article>
-
-            <article class="anecdotes">
-                <div class="anecdotes-header">
-                    <a class="anecdotes-header__more text--big text--blue hover-text--red" 
-                    href="http://ya.ru">
-                        Лучшие анекдоты
-                    </a>
-                </div>
-
-                <input type="radio" name="refresh-anecdote" id="anecdote-1" checked>
-                <input type="radio" name="refresh-anecdote" id="anecdote-2" >
-                <input type="radio" name="refresh-anecdote" id="anecdote-3" >
-                <input type="radio" name="refresh-anecdote" id="anecdote-4" >
-                <input type="radio" name="refresh-anecdote" id="anecdote-5" >
-
-                <article class="anecdote anecdote-1">
-                    <p class="anecdote-theme">
-                        Раздел: 
-                        <a class="anecdote-theme__link text--blue hover-text--red" 
-                        href="http://ya.ru">
-                            Медицинские
+        <section class="widgets">
+            <div class="column-1">
+                <section class="widget visited">
+                    <div class="widget-header">
+                        <a class="widget-header__more text--big text--blue hover-text--red" 
+                        href="#">
+                            Посещаемое
                         </a>
-                        .
-                    </p>
-                    <p class="anecdote__text">
-                        - Вас лечить хорошо или бесплатно?
-                    </p>
-                    <label class="anecdote__refresh text--blue hover-text--red" for="anecdote-2">
-                        Показать ещё
-                    </label>
-                </article>
-
-                <article class="anecdote anecdote-2">
-                    <p class="anecdote-theme">
-                        Раздел: 
-                        <a class="anecdote-theme__link text--blue hover-text--red" 
-                        href="http://ya.ru">
-                            Семейные
-                        </a>
-                        .
-                    </p>
-                    <p class="anecdote__text">
-                        Сколько бы ни было у женщины детей, самый младший все равно муж.
-                    </p>
-                    <label class="anecdote__refresh text--blue hover-text--red" for="anecdote-3">
-                        Показать ещё
-                    </label>
-                </article>
-
-                <article class="anecdote anecdote-3">
-                    <p class="anecdote-theme">
-                        Раздел: 
-                        <a class="anecdote-theme__link text--blue hover-text--red" 
-                        href="http://ya.ru">
-                            Жизненные
-                        </a>
-                        .
-                    </p>
-                    <p class="anecdote__text">
-                        Когда представится случай, то не забудь представиться ему.
-                    </p>
-                    <label class="anecdote__refresh text--blue hover-text--red" for="anecdote-4">
-                        Показать ещё
-                    </label>
-                </article>
-
-                <article class="anecdote anecdote-4">
-                    <p class="anecdote-theme">
-                        Раздел: 
-                        <a class="anecdote-theme__link text--blue hover-text--red" 
-                        href="http://ya.ru">
-                            Женские
-                        </a>
-                        .
-                    </p>
-                    <p class="anecdote__text">
-                        Окончательное решение женщины редко бывает последним.
-                    </p>
-                    <label class="anecdote__refresh text--blue hover-text--red" for="anecdote-5">
-                        Показать ещё
-                    </label>
-                </article>
-
-                <article class="anecdote anecdote-5">
-                    <p class="anecdote-theme">
-                        Раздел: 
-                        <a class="anecdote-theme__link text--blue hover-text--red" 
-                        href="http://ya.ru">
-                            Семейные
-                        </a>
-                        .
-                    </p>
-                    <p class="anecdote__text">
-                        По утрам в семье занимался зарядкой только мобильник.
-                    </p>
-                    <label class="anecdote__refresh text--blue hover-text--red" for="anecdote-1">
-                        Показать ещё
-                    </label>
-                </article>
-            </article>
-        </section>
-
-        <section class="column-2">
-            <article class="tv">
-                <div class="tv-header">
-                    <a class="tv-header__more text--big text--blue hover-text--red" 
-                    href="http://ya.ru">
-                        Телепрограмма
-                    </a>
-                    <a class="tv-header__tv-online">TV&nbsp;Online</a>
-                </div>
-
-                <div class="tv-item">
-                    <span class="tv-item__time">16:00</span>
-                    <a class="tv-item__broadcast hover-text--red" href="http://ya.ru">
-                        Понять.&nbsp;Простить
-                    </a>
-                    <a class="tv-item__channel text--gray hover-text--red" href="http://ya.ru">
-                        41&nbsp;Домашний
-                    </a>
-                </div>
-                <div class="tv-item">
-                    <span class="tv-item__time">16:30</span>
-                    <a class="tv-item__broadcast hover-text--red" href="http://ya.ru">
-                        Место&nbsp;встречи
-                    </a>
-                    <a class="tv-item__channel text--gray hover-text--red" href="http://ya.ru">
-                        НТВ
-                    </a>
-                </div>
-                <div class="tv-item">
-                    <span class="tv-item__time">16:30</span>
-                    <a class="tv-item__broadcast hover-text--red" href="http://ya.ru">
-                        Детективы
-                    </a>
-                    <a class="tv-item__channel text--gray hover-text--red" href="http://ya.ru">
-                        Пятый&nbsp;канал
-                    </a>
-                </div>
-                <div class="tv-item">
-                    <span class="tv-item__time">16:30</span>
-                    <a class="tv-item__broadcast hover-text--red" href="http://ya.ru">
-                        Новости
-                    </a>
-                    <a class="tv-item__channel text--gray hover-text--red" href="http://ya.ru">
-                        РЕН&nbsp;ТВ
-                    </a>
-                </div>
-                <div class="tv-item">
-                    <span class="tv-item__time">16:30</span>
-                    <a class="tv-item__broadcast hover-text--red" href="http://ya.ru">
-                        Гадалка
-                    </a>
-                    <a class="tv-item__channel text--gray hover-text--red" href="http://ya.ru">
-                        ТВ-3
-                    </a>
-                </div>
-                <div class="tv-item">
-                    <span class="tv-item__time">16:30</span>
-                    <a class="tv-item__broadcast hover-text--red" href="http://ya.ru">
-                        Рельные&nbsp;пацаны
-                    </a>
-                    <a class="tv-item__channel text--gray hover-text--red" href="http://ya.ru">
-                        ТНТ
-                    </a>
-                </div>
-            </article>
-
-            <article class="auto-news">
-                <div class="auto-news-header">
-                    <a class="auto-news-header__more text--big text--blue hover-text--red" 
-                    href="http://ya.ru">
-                        Автомобильные новости
-                    </a>
-                </div>
-
-                <div class="auto-news-items">
-                    <div class="white-shadow--top"></div>
-                    <div class="white-shadow--bottom"></div>
-
-                    <div class="auto-news-item">
-                        <a class="auto-news-item__link hover-text--red" href="http://ya.ru">
-                            Автоэксперты назвали лучший женский автомобиль 2017 года
-                        </a>
-                        <span class="auto-news-item__time text--small text--gray">10:56</span>
                     </div>
-                    <div class="auto-news-item">
-                        <a class="auto-news-item__link hover-text--red" href="http://ya.ru">
-                            Aston Martin Пола Маккартни выставлен на торги Bonhams
-                        </a>
-                        <span class="auto-news-item__time text--small text--gray">09:59</span>
-                    </div>
-                    <div class="auto-news-item">
-                        <a class="auto-news-item__link hover-text--red" href="http://ya.ru">
-                            Эксперты: хакеры могут убить миллионы людей через взлом автомобилей
-                        </a>
-                        <span class="auto-news-item__time text--small text--gray">09:03</span>
-                    </div>
-                    <div class="auto-news-item">
-                        <a class="auto-news-item__link hover-text--red" href="http://ya.ru">
-                            Volvo поставит Uber 24 000 беспилотных кроссоверов XC90
-                        </a>
-                        <span class="auto-news-item__time text--small text--gray">01:00</span>
-                    </div>
-                    <div class="auto-news-item">
-                        <a class="auto-news-item__link hover-text--red" href="http://ya.ru">
-                            В октябре российский рынок грузовиков вырос на 60%
-                        </a>
-                        <span class="auto-news-item__time text--small text--gray">08:00</span>
-                    </div>
-                    <div class="auto-news-item">
-                        <a class="auto-news-item__link hover-text--red" href="http://ya.ru">
-                            Lincoln представил обновлённый кроссовер Lincoln MKC 2019
-                        </a>
-                        <span class="auto-news-item__time text--small text--gray">12:04</span>
-                    </div>
-                    <div class="auto-news-item">
-                        <a class="auto-news-item__link hover-text--red" href="http://ya.ru">
-                            Производство электрокаров от Skoda будет налажено в 2020 году
-                        </a>
-                        <span class="auto-news-item__time text--small text--gray">12:15</span>
-                    </div>
-                    <div class="auto-news-item">
-                        <a class="auto-news-item__link hover-text--red" href="http://ya.ru">
-                            Третью модель китайской компании LynkCo показали до премьеры
-                        </a>
-                        <span class="auto-news-item__time text--small text--gray">16:25</span>
-                    </div>
-                    <div class="auto-news-item">
-                        <a class="auto-news-item__link hover-text--red" href="http://ya.ru">
-                            В московском каршеринге появились первые электрокары
-                        </a>
-                        <span class="auto-news-item__time text--small text--gray">22:05</span>
-                    </div>
-                    <div class="auto-news-item">
-                        <a class="auto-news-item__link hover-text--red" href="http://ya.ru">
-                            Челябинцев приглашают на тест-драйв нового УАЗ ПРОФИ
-                        </a>
-                        <span class="auto-news-item__time text--small text--gray">10:07</span>
-                    </div>
-                </div>
-            </article>
-        </section>
 
-        <section class="column-3">
-            <article class="weather">
-                <div class="weather-header">
-                    <a class="weather-header__more text--big text--blue hover-text--red" 
-                    href="http://ya.ru">
-                        Погода
-                    </a>
-                    <img class="weather-header__current-weather" src="images/snow.png" 
-                    alt="Снег" title="Снег">
-                    <span class="weather-header__current-temperature text--big">-3&#186;C</span>
-                </div>
+                    <div class="visited-item">
+                        <a class="visited-item__theme text--bold hover-text--red" href="#">
+                            Маркет
+                        </a>
+                        &mdash;
+                        <a class="visited-item__article hover-text--red" href="#">
+                            китайская распродажа
+                        </a>
+                    </div>
+                    <div class="visited-item">
+                        <a class="visited-item__theme text--bold hover-text--red" href="#">
+                            Авто.ру
+                        </a>
+                        &mdash;
+                        <a class="visited-item__article hover-text--red" href="#">
+                            Туссан третьей серии
+                        </a>
+                    </div>
+                    <div class="visited-item">
+                        <a class="visited-item__theme text--bold hover-text--red" href="#">
+                            Недвижимость
+                        </a>
+                        &mdash;
+                        <a class="visited-item__article hover-text--red" href="#">
+                            продажа студии
+                        </a>
+                    </div>
+                    <div class="visited-item">
+                        <a class="visited-item__theme text--bold hover-text--red" href="#">
+                            Работа
+                        </a>
+                        &mdash;
+                        <a class="visited-item__article hover-text--red" href="#">
+                            охранником
+                        </a>
+                    </div>
+                    <div class="visited-item">
+                        <a class="visited-item__theme text--bold hover-text--red" href="#">
+                            Здоровье
+                        </a>
+                        &mdash;
+                        <a class="visited-item__article hover-text--red" href="#">
+                            врач на связи
+                        </a>
+                    </div>
+                    <div class="visited-item">
+                        <a class="visited-item__theme text--bold hover-text--red" href="#">
+                            Коллекции
+                        </a>
+                        &mdash;
+                        <a class="visited-item__article hover-text--red" href="#">
+                            как мелировать волосы
+                        </a>
+                    </div>
+                    <div class="visited-item">
+                        <a class="visited-item__theme text--bold hover-text--red" href="#">
+                            Авиабилеты
+                        </a>
+                        &mdash;
+                        <a class="visited-item__article hover-text--red" href="#">
+                            из Екатеринбурга
+                        </a>
+                    </div>
+                </section>
 
-                <span class="weather__future-temperature">Вечер -5, ночь -7</span>
-            </article>
+                <section class="widget anecdotes">
+                    <div class="widget-header">
+                        <a class="widget-header__more text--big text--blue hover-text--red" 
+                        href="#">
+                            Лучшие анекдоты
+                        </a>
+                    </div>
 
-            <article class="traffic-jams">
-                <div class="traffic-jams-header">
-                    <a class="traffic-jams-header__more text--big text--blue hover-text--red" 
-                    href="http://ya.ru">
-                        Пробки
-                    </a>
-                    <img class="traffic-jams-header__jams-4" src="images/jams-4.png" 
-                    alt="Пробки 4 балла" title="Пробки 4 балла">
-                    <span class="traffic-jams-header__current-value text--big">4 балла</span>
-                </div>
+                    <input type="radio" name="refresh-anecdote" id="anecdote-1" checked>
+                    <input type="radio" name="refresh-anecdote" id="anecdote-2" >
+                    <input type="radio" name="refresh-anecdote" id="anecdote-3" >
+                    <input type="radio" name="refresh-anecdote" id="anecdote-4" >
+                    <input type="radio" name="refresh-anecdote" id="anecdote-5" >
 
-                <span class="traffic-jams__description">Местами затруднения</span>
-            </article>
+                    <article class="anecdote anecdote-1">
+                        <p class="anecdote__theme">
+                            Раздел: 
+                            <a class="link text--blue hover-text--red" href="#">Медицинские</a>
+                            .
+                        </p>
+                        <p class="anecdote__text">
+                            - Вас лечить хорошо или бесплатно?
+                        </p>
+                        <label class="text--blue hover-text--red" for="anecdote-2">
+                            Показать ещё
+                        </label>
+                    </article>
 
-            <article class="map">
-                <div class="map-header">
-                    <a class="map-header__more text--big text--blue hover-text--red" 
-                    href="http://ya.ru">
-                        Карта Екатеринбурга
-                    </a>
-                </div>
+                    <article class="anecdote anecdote-2">
+                        <p class="anecdote__theme">
+                            Раздел: <a class="text--blue hover-text--red" href="#">Семейные</a> .
+                        </p>
+                        <p class="anecdote__text">
+                            Сколько бы ни было у женщины детей, самый младший все равно муж.
+                        </p>
+                        <label class="text--blue hover-text--red" for="anecdote-3">
+                            Показать ещё
+                        </label>
+                    </article>
 
-                <a class="map__link text--bold hover-text--red" href="http://ya.ru">
-                    Такси
-                </a>
-                <a class="map__link text--bold hover-text--red" href="http://ya.ru">
-                    Расписания
-                </a>
-                <a class="map__link text--bold hover-text--red" href="http://ya.ru">
-                    Междугородные&nbsp;автобусы
-                </a>
-            </article>
+                    <article class="anecdote anecdote-3">
+                        <p class="anecdote__theme">
+                            Раздел: <a class="text--blue hover-text--red" href="#">Жизненные</a> .
+                        </p>
+                        <p class="anecdote__text">
+                            Когда представится случай, то не забудь представиться ему.
+                        </p>
+                        <label class="text--blue hover-text--red" for="anecdote-4">
+                            Показать ещё
+                        </label>
+                    </article>
 
-            <article class="affiche">
-                <div class="affiche-header">
-                    <a class="affiche-header__link text--big text--blue hover-text--red" 
-                    href="http://ya.ru">
-                        Афиша
-                    </a>
-                </div>
+                    <article class="anecdote anecdote-4">
+                        <p class="anecdote__theme">
+                            Раздел: <a class="text--blue hover-text--red" href="#">Женские</a> .
+                        </p>
+                        <p class="anecdote__text">
+                            Окончательное решение женщины редко бывает последним.
+                        </p>
+                        <label class="anecdote__refresh text--blue hover-text--red" for="anecdote-5">
+                            Показать ещё
+                        </label>
+                    </article>
 
-                <div class="affiche-item">
-                    <a class="affiche-item__link hover-text--red" href="http://ya.ru">
-                        Субурбикон
-                    </a>
-                    <span class="affiche-item__description text--gray">премьера в чт</span>
-                </div>
-                <div class="affiche-item">
-                    <a class="affiche-item__link hover-text--red" href="http://ya.ru">
-                        Последний богатырь
-                    </a>
-                    <span class="affiche-item__description text--gray">приключения</span>
-                </div>
-                <div class="affiche-item">
-                    <a class="affiche-item__link hover-text--red" href="http://ya.ru">
-                        Фиксики: большой секрет
-                    </a>
-                    <span class="affiche-item__description text--gray">мультфильм</span>
-                </div>
-                <div class="affiche-item">
-                    <a class="affiche-item__link hover-text--red" href="http://ya.ru">
-                        Тор: Рагнарёк
-                    </a>
-                    <span class="affiche-item__description text--gray">фэнтези</span>
-                </div>
-                <div class="affiche-item">
-                    <a class="affiche-item__link hover-text--red" href="http://ya.ru">
-                        Убийство в Восточном экспрессе
-                    </a>
-                    <span class="affiche-item__description text--gray">драма</span>
-                </div>
+                    <article class="anecdote anecdote-5">
+                        <p class="anecdote__theme">
+                            Раздел: <a class="text--blue hover-text--red" href="#">Семейные</a> .
+                        </p>
+                        <p class="anecdote__text">
+                            По утрам в семье занимался зарядкой только мобильник.
+                        </p>
+                        <label class="text--blue hover-text--red" for="anecdote-1">
+                            Показать ещё
+                        </label>
+                    </article>
+                </section>
+            </div>
 
-                <div class="affiche-item additional-affiche">
-                    <a class="affiche-item__link text--bold hover-text--red" href="http://ya.ru">
-                        Концерты
-                    </a>
-                    &mdash;
-                    <a class="affiche-item__link text--bold hover-text--red" href="http://ya.ru">
-                        Brainstorm
-                    </a>
-                </div>
-            </article>
+            <div class="column-2">
+                <section class="widget tv">
+                    <div class="widget-header">
+                        <a class="widget-header__more text--big text--blue hover-text--red" 
+                        href="#">
+                            Телепрограмма
+                        </a>
+                        <a class="tv__tv-online">TV&nbsp;Online</a>
+                    </div>
+
+                    <div class="tv-item">
+                        <span class="tv-item__time">16:00</span>
+                        <a class="tv-item__broadcast hover-text--red" href="#">
+                            Понять.&nbsp;Простить
+                        </a>
+                        <a class="tv-item__channel text--gray hover-text--red" href="#">
+                            41&nbsp;Домашний
+                        </a>
+                    </div>
+                    <div class="tv-item">
+                        <span class="tv-item__time">16:30</span>
+                        <a class="tv-item__broadcast hover-text--red" href="#">
+                            Место&nbsp;встречи
+                        </a>
+                        <a class="tv-item__channel text--gray hover-text--red" href="#">
+                            НТВ
+                        </a>
+                    </div>
+                    <div class="tv-item">
+                        <span class="tv-item__time">16:30</span>
+                        <a class="tv-item__broadcast hover-text--red" href="#">
+                            Детективы
+                        </a>
+                        <a class="tv-item__channel text--gray hover-text--red" href="#">
+                            Пятый&nbsp;канал
+                        </a>
+                    </div>
+                    <div class="tv-item">
+                        <span class="tv-item__time">16:30</span>
+                        <a class="tv-item__broadcast hover-text--red" href="#">
+                            Новости
+                        </a>
+                        <a class="tv-item__channel text--gray hover-text--red" href="#">
+                            РЕН&nbsp;ТВ
+                        </a>
+                    </div>
+                    <div class="tv-item">
+                        <span class="tv-item__time">16:30</span>
+                        <a class="tv-item__broadcast hover-text--red" href="#">
+                            Гадалка
+                        </a>
+                        <a class="tv-item__channel text--gray hover-text--red" href="#">
+                            ТВ-3
+                        </a>
+                    </div>
+                    <div class="tv-item">
+                        <span class="tv-item__time">16:30</span>
+                        <a class="tv-item__broadcast hover-text--red" href="#">
+                            Рельные&nbsp;пацаны
+                        </a>
+                        <a class="tv-item__channel text--gray hover-text--red" href="#">
+                            ТНТ
+                        </a>
+                    </div>
+                </section>
+
+                <section class="widget auto-news">
+                    <div class="widget-header">
+                        <a class="widget-header__more text--big text--blue hover-text--red" 
+                        href="#">
+                            Автомобильные новости
+                        </a>
+                    </div>
+
+                    <div class="auto-news-items">
+                        <div class="white-shadow--top"></div>
+                        <div class="white-shadow--bottom"></div>
+
+                        <div class="auto-news-item">
+                            <a class="auto-news-item__link hover-text--red" href="#">
+                                Автоэксперты назвали лучший женский автомобиль 2017 года
+                            </a>
+                            <span class="auto-news-item__time text--small text--gray">10:56</span>
+                        </div>
+                        <div class="auto-news-item">
+                            <a class="auto-news-item__link hover-text--red" href="#">
+                                Aston Martin Пола Маккартни выставлен на торги Bonhams
+                            </a>
+                            <span class="auto-news-item__time text--small text--gray">09:59</span>
+                        </div>
+                        <div class="auto-news-item">
+                            <a class="auto-news-item__link hover-text--red" href="#">
+                                Эксперты: хакеры могут убить миллионы людей через взлом автомобилей
+                            </a>
+                            <span class="auto-news-item__time text--small text--gray">09:03</span>
+                        </div>
+                        <div class="auto-news-item">
+                            <a class="auto-news-item__link hover-text--red" href="#">
+                                Volvo поставит Uber 24 000 беспилотных кроссоверов XC90
+                            </a>
+                            <span class="auto-news-item__time text--small text--gray">01:00</span>
+                        </div>
+                        <div class="auto-news-item">
+                            <a class="auto-news-item__link hover-text--red" href="#">
+                                В октябре российский рынок грузовиков вырос на 60%
+                            </a>
+                            <span class="auto-news-item__time text--small text--gray">08:00</span>
+                        </div>
+                        <div class="auto-news-item">
+                            <a class="auto-news-item__link hover-text--red" href="#">
+                                Lincoln представил обновлённый кроссовер Lincoln MKC 2019
+                            </a>
+                            <span class="auto-news-item__time text--small text--gray">12:04</span>
+                        </div>
+                        <div class="auto-news-item">
+                            <a class="auto-news-item__link hover-text--red" href="#">
+                                Производство электрокаров от Skoda будет налажено в 2020 году
+                            </a>
+                            <span class="auto-news-item__time text--small text--gray">12:15</span>
+                        </div>
+                        <div class="auto-news-item">
+                            <a class="auto-news-item__link hover-text--red" href="#">
+                                Третью модель китайской компании LynkCo показали до премьеры
+                            </a>
+                            <span class="auto-news-item__time text--small text--gray">16:25</span>
+                        </div>
+                        <div class="auto-news-item">
+                            <a class="auto-news-item__link hover-text--red" href="#">
+                                В московском каршеринге появились первые электрокары
+                            </a>
+                            <span class="auto-news-item__time text--small text--gray">22:05</span>
+                        </div>
+                        <div class="auto-news-item">
+                            <a class="auto-news-item__link hover-text--red" href="#">
+                                Челябинцев приглашают на тест-драйв нового УАЗ ПРОФИ
+                            </a>
+                            <span class="auto-news-item__time text--small text--gray">10:07</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="column-3">
+                <section class="widget weather">
+                    <div class="widget-header">
+                        <a class="widget-header__more text--big text--blue hover-text--red" 
+                        href="#">
+                            Погода
+                        </a>
+                        <img class="weather__current-weather" src="images/snow.png" 
+                        alt="Снег" title="Снег">
+                        <span class="weather__current-temperature text--big">-3&#186;C</span>
+                    </div>
+
+                    <span class="weather__future-temperature">Вечер -5, ночь -7</span>
+                </section>
+
+                <section class="widget traffic-jams">
+                    <div class="widget-header">
+                        <a class="widget-header__more text--big text--blue hover-text--red" 
+                        href="#">
+                            Пробки
+                        </a>
+                        <img class="traffic-jams__jams-4" src="images/jams-4.png" 
+                        alt="Пробки 4 балла" title="Пробки 4 балла">
+                        <span class="traffic-jams__current-value text--big">4 балла</span>
+                    </div>
+
+                    <span class="traffic-jams__description">Местами затруднения</span>
+                </section>
+
+                <section class="widget map">
+                    <div class="widget-header">
+                        <a class="widget-header__more text--big text--blue hover-text--red" 
+                        href="#">
+                            Карта Екатеринбурга
+                        </a>
+                    </div>
+
+                    <a class="map__link text--bold hover-text--red" href="#">Такси</a>
+                    <a class="map__link text--bold hover-text--red" href="#">Расписания</a>
+                    <a class="map__link text--bold hover-text--red" href="#">Междугородные&nbsp;автобусы</a>
+                </section>
+
+                <section class="widget affiches">
+                    <div class="widget-header">
+                        <a class="widget-header__link text--big text--blue hover-text--red" 
+                        href="#">
+                            Афиша
+                        </a>
+                    </div>
+
+                    <div class="affiche">
+                        <a class="affiche__link hover-text--red" href="#">Субурбикон</a>
+                        <span class="affiche__description text--gray">премьера в чт</span>
+                    </div>
+                    <div class="affiche">
+                        <a class="affiche__link hover-text--red" href="#">Последний богатырь</a>
+                        <span class="affiche__description text--gray">приключения</span>
+                    </div>
+                    <div class="affiche">
+                        <a class="affiche__link hover-text--red" href="#">Фиксики: большой секрет</a>
+                        <span class="affiche__description text--gray">мультфильм</span>
+                    </div>
+                    <div class="affiche">
+                        <a class="affiche__link hover-text--red" href="#">Тор: Рагнарёк</a>
+                        <span class="affiche__description text--gray">фэнтези</span>
+                    </div>
+                    <div class="affiche">
+                        <a class="affiche__link hover-text--red" href="#">Убийство в Восточном экспрессе</a>
+                        <span class="affiche__description text--gray">драма</span>
+                    </div>
+
+                    <div class="more-affiche">
+                        <a class="more-affiche__link text--bold hover-text--red" href="#">Концерты</a>
+                        &mdash;
+                        <a class="more-affiche__link text--bold hover-text--red" href="#">Brainstorm</a>
+                    </div>
+                </section>
+            </div>
         </section>
     </main>
 </body>
