@@ -348,12 +348,12 @@ input[id='set-8']:not(:checked) ~ .settings label[for='set-8']::before
 
 .search-form__search::after
 {
-    content: '\1F782';
+    content: '';
     position: absolute;
-    top: -1.5rem;
-    right: -2rem;
-    font-size: 4.03rem;
-    color: #fd3;
+    top: -.15rem;
+    right: -3.15rem;
+    border: 1.5rem solid transparent;
+    border-left: 1.5rem solid #fd3;
 }
 
 .example
