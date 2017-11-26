@@ -294,9 +294,10 @@ input[id='set-8']:not(:checked) ~ .settings label[for='set-8']::before
 
 .yandex-logo__logo
 {
-    display: block;
-    margin: 2rem 0 0;
-    font-size: 2.5rem;
+    height: 3.5rem;
+    margin: 1.6rem 0 0;
+    background: url(images/logo.png) top right no-repeat;
+    background-size: contain;
 }
 
 .search
@@ -343,6 +344,16 @@ input[id='set-8']:not(:checked) ~ .settings label[for='set-8']::before
     border: 2px solid #fd3;
     background-color: #fd3;
     cursor: pointer;
+}
+
+.search-form__search::after
+{
+    content: '\1F782';
+    position: absolute;
+    top: -1.5rem;
+    right: -2rem;
+    font-size: 4.03rem;
+    color: #fd3;
 }
 
 .example
